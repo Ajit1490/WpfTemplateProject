@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WpfMvvmProjectTemplate.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfMvvmProjectTemplate.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Margin="20">
+            <Label Content="WPF MVVM Project Template"/>
+            <Label Content="Sample project to get started with building applications in Native WPF."/>
+            <Label Content=""/>
+            <Label Content="There is a MainMenuView that controls menu and base theme. In the menu there are 2 menu options."/>
+            <Label Content="One displayes HomeView (DataContext:HomeViewModel) while other displays BindingDemoView (DataContext: BindingDemoViewModel)"/>
+            <Label Content=""/>
+            <Label Content="BaseViewModel: Base class for all view models, that implements INotifyPropertyChanged interface."/>
+            <Label Content=""/>
+            <Label Content="Styling of application is configured in DefaultStyle.xaml file."/>
+            <Label Content=""/>
+            <Label Content="IMessageBoxService is exposed by business logic (ViewModel in this case) and is implemented by Views (Presentation layer)."/>
+            <Label Content="This will separate the concerns of displaying message on UI from View Models as well as, it will keep look and feel of message boxes consistent across the application."/>
+            <Label Content=""/>
+            <Label Content="DelegateCommandAsync: Implements ICommand interface. "/>
+            <Label Content=""/>
+        </StackPanel>
+    </Grid>
+</UserControl>

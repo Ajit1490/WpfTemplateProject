@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfMvvmProjectTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:WpfMvvmProjectTemplate.Views"
+        xmlns:viewModels="clr-namespace:WpfMvvmProjectTemplate.ViewModels;assembly=WpfMvvmProjectTemplate.ViewModels"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="WPF Project Tempate" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DefaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:MainViewModel}">
+                <views:MainMenuView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:BindingDemoViewModel}">
+                <views:BindingDemoView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="{DynamicResource BgColor}"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+        <ContentPresenter x:Name="MainWindowContentPresenter"/>
+    </Grid>
+</Window>
